@@ -1,0 +1,6 @@
+md-list-item {
+    margin: 10px;
+    background: gray;
+    box-shadow: 2px 2px 5px gray;
+    width: 300px;
+}
