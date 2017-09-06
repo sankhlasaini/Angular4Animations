@@ -37,4 +37,84 @@
     </md-nav-list>
 
 
+
+    <div>
+        <button md-icon-button [mdMenuTriggerFor]="rootMenu">
+        <md-icon>more_vert</md-icon>
+    </button>
+        <md-menu #rootMenu="mdMenu">
+            <button md-menu-item>1</button>
+            <button md-menu-item [mdMenuTriggerFor]="subMenu2">2</button>
+            <button md-menu-item [mdMenuTriggerFor]="subMenu3">3</button>
+            <button md-menu-item [mdMenuTriggerFor]="subMenu4">4</button>
+        </md-menu>
+
+        <md-menu #subMenu2="mdMenu">
+            <button md-menu-item>2-1</button>
+            <button md-menu-item>2-2</button>
+            <button md-menu-item>2-3</button>
+        </md-menu>
+
+        <md-menu #subMenu3="mdMenu">
+            <button md-menu-item>3-1</button>
+            <button md-menu-item>3-2</button>
+            <button md-menu-item>3-3</button>
+        </md-menu>
+
+        <md-menu #subMenu4="mdMenu">
+            <button md-menu-item>4-1</button>
+            <button md-menu-item>4-2</button>
+            <button md-menu-item [mdMenuTriggerFor]="subsubMenu4">4-3</button>
+        </md-menu>
+
+        <md-menu #subsubMenu4="mdMenu">
+            <button md-menu-item>4-4-1</button>
+            <button md-menu-item>4-4-2</button>
+            <button md-menu-item>4-4-3</button>
+        </md-menu>
+
+    </div>
+
+    <md-tab-group dynamicHeight backgroundColor="accent" md-stretch-tabs>
+        <md-tab>
+            <ng-template md-tab-label>
+                Best pasta restaurants
+            </ng-template>
+            <h1>Best pasta restaurants</h1>
+            <h1>Best pasta restaurants</h1>
+            <h1>Best pasta restaurants</h1>
+            <h1>Best pasta restaurants</h1>
+        </md-tab>
+        <md-tab>
+            <ng-template md-tab-label>
+                <md-icon>thumb_down</md-icon>
+                The worst sushi
+
+            </ng-template>
+            <h1>Terrible sushi restaurants</h1>
+        </md-tab>
+    </md-tab-group>
+
 </md-card>
+
+<md-drawer-container class="example-sidenav-fab-container">
+    <md-drawer #sidenav mode="over" opened="true" style="width:300px">
+        <button md-mini-fab class="example-fab" (click)="sidenav.toggle()">
+      <md-icon>add</md-icon>
+    </button>
+        <div class="example-scrolling-content">
+            Lorem ipsum dolor sit amet, pede a libero aenean phasellus, lectus metus sint ut risus, fusce vel in pellentesque. Nisl rutrum etiam morbi consectetuer tempor magna, aenean nullam nunc id, neque vivamus interdum sociis nulla scelerisque sem, dolor id
+            wisi turpis magna aliquam magna. Risus accumsan hac eget etiam donec sed, senectus erat mattis quam, tempor vel urna occaecat cras, metus urna augue nec at. Et morbi amet dui praesent, nec eu at, ligula ipsum dui sollicitudin, quis nisl massa
+            viverra ligula, mauris fermentum orci arcu enim fringilla. Arcu erat nulla in aenean lacinia ullamcorper, urna ante nam et sagittis, tristique vehicula nibh ipsum vivamus, proin proin. Porta commodo nibh quis libero amet. Taciti dui, sapien
+            consectetuer.
+        </div>
+    </md-drawer>
+    <button md-mini-fab class="example-fab" (click)="sidenav.toggle()">
+    <md-icon>add</md-icon>
+  </button>
+    <div class="example-scrolling-content">
+        Lorem ipsum dolor sit amet, pede a libero aenean phasellus, lectus metus sint ut risus, fusce vel in pellentesque. Nisl rutrum etiam morbi consectetuer tempor magna, aenean nullam nunc id, neque vivamus interdum sociis nulla scelerisque sem, dolor id
+        wisi turpis magna aliquam magna. Risus accumsan hac eget etiam donec sed, senectus erat mattis quam, tempor vel urna occaecat cras, metus urna augue nec at. Et morbi amet dui praesent, nec eu at, ligula ipsum dui sollicitudin, quis nisl massa
+        viverra ligula, mauris fermentum orci arcu enim fringilla. Arcu erat nulla in aenean lacinia ullamcorper, urna ante nam et sagittis, tristique vehicula nibh ipsum vivamus, proin proin. Porta commodo nibh quis libero amet. Taciti dui, sapien consectetuer.
+    </div>
+</md-drawer-container>
