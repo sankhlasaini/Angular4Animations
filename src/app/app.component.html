@@ -1,7 +1,40 @@
 <button md-button (click)="pushData2()">Action</button>
 
-<ul>
+<!-- <ul>
     <li *ngFor="let hero of showArray; let i = index" (@flyInOut.done)="pushData()" [@flyInOut] (click)="removeMe(i)">
         {{hero}}
     </li>
 </ul>
+ -->
+
+
+<md-card style="margin:auto;width:400px">
+    <!-- <form class="example-form">
+        <md-form-field class="example-full-width">
+            <input mdInput placeholder="Favorite food" value="Sushi">
+        </md-form-field>
+    </form>
+    <md-list>
+        <md-list-item> Pepper </md-list-item>
+        <md-list-item> Salt </md-list-item>
+        <md-list-item> Paprika </md-list-item>
+    </md-list> -->
+
+
+
+    <md-nav-list>
+        <md-list-item (click)="selectAllfunc()">
+            <b> Select All</b>
+            <div fxFlex> </div>
+            <md-icon color="accent" [style.color]="selectAllIcon.color">{{selectAllIcon.icon}}</md-icon>
+        </md-list-item>
+        <md-list-item [disableRipple]="asd" *ngFor="let item of heroes" (click)="toggle(item)" style="cursor: pointer;">
+            {{item.name}}
+            <div fxFlex> </div>
+            <md-icon *ngIf="item.tick" color="accent">check_box</md-icon>
+            <md-icon *ngIf="!item.tick" style="color:gray">check_box_outline_blank</md-icon>
+        </md-list-item>
+    </md-nav-list>
+
+
+</md-card>
